@@ -2,3 +2,6 @@ name = "Fm2gp"
 uuid = "eaec6202-7649-11e9-2773-e19954696ee0"
 authors = ["Kristoffer Andersson <kode.kristoff@gmail.com>"]
 version = "0.1.0"
+
+[deps]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
