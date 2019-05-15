@@ -22,7 +22,7 @@ end
     @test typeof(r) == typeof(x)
 end
 
-set "multiply" begin
+@testset "multiply" begin
     n, x = 1, 2
     r = multiply(n, x)
     @test r == x
