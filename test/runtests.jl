@@ -33,3 +33,15 @@ end
     @test r == 12.0
     @test typeof(r) == typeof(x)
 end
+
+@testset "power_mul" begin
+    n, x = 1, 2
+    r = power(n, x, *)
+    @test r == x
+    @test typeof(r) == typeof(x)
+
+    n, x = 3, 4.0
+    r = power(n, x, *)
+    @test r == 64.0
+    @test typeof(r) == typeof(x)
+end

@@ -30,6 +30,17 @@ function multiply_accumulate(r, n::Integer, a)
     end
 end
 
+function power_accumulate(r, n::Integer, a, op)
+    while true
+        if is_odd(n)
+            r = op(r, a)
+            if n == one(n)  return r    end
+        end
+        n = half(n)
+        a = op(a, a)
+    end
+end
+
 function multiply(n::Integer, a)
     while !is_odd(n)
         a = a + a
