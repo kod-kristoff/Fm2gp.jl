@@ -1,6 +1,6 @@
 module Fm2gp
 
-export is_odd, half, multiply, multiply_accumulate, multiply_recursive
+export is_odd, half, multiply, multiply_accumulate, multiply_recursive, power_accumulate
 
 function is_odd(x)::Bool
     x & 0x1

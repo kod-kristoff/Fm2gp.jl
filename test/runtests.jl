@@ -34,14 +34,14 @@ end
     @test typeof(r) == typeof(x)
 end
 
-@testset "power_mul" begin
+@testset "power_accumulate_mul" begin
     n, x = 1, 2
-    r = power(n, x, *)
+    r = power_accumulate(1, n, x, *)
     @test r == x
     @test typeof(r) == typeof(x)
 
     n, x = 3, 4.0
-    r = power(n, x, *)
+    r = power_accumulate(1.0,n, x, *)
     @test r == 64.0
     @test typeof(r) == typeof(x)
 end
